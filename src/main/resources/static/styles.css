@@ -5,9 +5,29 @@ body {
     color: rgba(30, 30, 30, 1);
 }
 
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: all 0.5s ease;
+}
+
+header.active {
+    background: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: all 0.5s ease;
+}
+
+header.active img {
+    width: 0;
+}
+
 header img {
     width: 50%;
     margin-left: 10%;
+    transition: ease all .1s;
 }
 
 .navbar-brand {
@@ -20,10 +40,21 @@ header ul {
 
 .nav-item {
     margin-right: 8%;
+    transition: ease all .1s;
+}
+
+.nav-item:hover {
+    transform: scale(1.1);
+    transition: ease all .1s;
 }
 
 #inicio {
-    margin: 0 10% 0;
+    display: flex;
+    margin: 10% 10% 0;
+}
+
+#novedades, #nosotros {
+    margin: 10% 10% 0;
 }
 
 h2 {
@@ -43,12 +74,16 @@ h5, p {
     width: 80%;
 }
 
-#icon2 img {
+#bienvenidos {
     width: 50%;
 }
 
-#novedades, #nosotros {
-    margin: 10% 10% 0;
+#icon1 img {
+    width: 100%;
+}
+
+#icon2 img {
+    width: 50%;
 }
 
 .hiper-text {
@@ -83,7 +118,16 @@ h5, p {
 #novedades a {
     color: rgba(76, 200, 125, 1);
     text-decoration: none;
-    margin-left: 60%;
+    margin-left: 55%;
+    transition: ease all .1s;
+}
+
+#novedades a:hover {
+    background-color: rgba(76, 200, 125, 1);
+    color: white;
+    border-radius: 1.5rem;
+    padding: 1.5%;
+    transition: ease all .1s;
 }
 
 #nosotros h5 {
@@ -101,4 +145,405 @@ h5, p {
 #nosotros img {
     width: 20%;
     margin: 0 40%;
+}
+
+.equipo, .objetivos, .members {
+    display: flex;
+}
+
+#equipo {
+    width: 50%;
+    margin: 10% 0 0 10%;
+}
+
+#equipo .card {
+    width: 30%;
+    background: none;
+    border: none;
+}
+
+#equipo img {
+    width: 60%;
+    margin: 0 20%;
+}
+
+#pic-grupo  img{
+    width: 100%;
+}
+
+#correo img {
+    width: 5%;
+}
+
+#correo {
+    margin: 0 0 0 37%;
+}
+
+#correo h6, #telefono h6 {
+    padding: 1% 0 0 0;
+}
+
+#telefono img {
+    width: 4%;
+    margin: 0 0 0 3%;
+}
+
+#telefono {
+    display: flex;
+    margin: 0 0 0 25%;
+}
+
+footer {
+    margin: 10% 10% 10%;
+}
+
+@media screen and (max-width: 1280px) {
+    .nav-item {
+        margin-right: 7%;
+    }
+
+    #telefono {
+        margin: 0 0 0 24%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-item {
+        margin-right: 4%;
+    }
+
+    .text {
+        width: 110%;
+        margin: 3% 0 7%;
+    }
+
+    #correo img {
+        width: 6%;
+    }
+
+    #correo {
+        margin: 0 0 0 32%;
+    }
+
+    #telefono img {
+        width: 5%;
+    }
+
+    #telefono {
+        margin: 0 0 0 20%;
+    }
+}
+
+@media screen and (max-width: 912px) {
+    .navbar-collapse {
+        background-color: white;
+        padding-left: 4%;
+    }
+
+    #novedades a {
+        margin-left: 40%;
+    }
+
+    #novedades img {
+        margin-top: 20%;
+    }
+
+    #correo h6 {
+        padding: 2% 0 0 0;
+    }
+
+    #correo img {
+        width: 8%;
+    }
+
+    #correo {
+        margin: 0 0 0 30%;
+    }
+
+    #telefono {
+        margin: 0 0 0 17%;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    #inicio {
+        display: block;
+        margin: 20% 20% 0;
+    }
+
+    #icon1 {
+        margin-left: 30%;
+    }
+
+    #icon2 img {
+        width: 0;
+    }
+
+    .text {
+        width: 180%;
+    }
+    
+    #inicio h2 {
+        width: 150%;
+    }
+
+    #novedades a {
+        margin-left: 30%;
+    }
+
+    #novedades img {
+        margin-top: 25%;
+    }
+
+    #nosotros h5 {
+        margin: 0;
+        width: 100%;
+    }
+
+    #nosotros .card-text {
+        font-size: 70%;
+    }
+
+    #equipo .card-text {
+        font-size: 70%;
+    }
+
+    #correo {
+        margin: 0 0 0 27%;
+    }
+
+    #telefono {
+        margin: 0 0 0 13%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    body {
+        background: url(/static/fondo_540.png) no-repeat;
+    }
+
+    h2 {
+        font-size: 120%;
+    }
+    
+    h5, p, h3, h6 {
+        font-size: 80%;
+        margin-bottom: 0;
+    }
+
+    .nav-item {
+        font-size: 70%;
+    }
+
+    #novedades .col-md-4 {
+        width: 80%;
+        margin-left: 10%;
+    }
+    
+    #novedades .card {
+        height: 30rem;
+        width: 15rem;
+        margin-left: 22%;
+    }
+
+    #novedades .card-body {
+        margin-top: 0;
+        margin-right: 0;
+    }
+
+    #novedades img {
+        margin-top: 10%;
+    }
+
+    #novedades a {
+        font-size: 80%;
+    }
+
+    #novedades a:hover {
+        background-color: white;
+        color: rgba(76, 200, 125, 1);
+        border-radius: 0;
+        padding: 0;
+        transition: 0;
+    }
+
+    .equipo {
+        display: block;
+    }
+
+    #equipo {
+        width: 90%;
+    }
+
+    #equipo img {
+        width: 50%;
+        margin: 0 25%;
+    }
+
+    #pic-grupo  img{
+        width: 0;
+    }
+
+    #nosotros .card-text {
+        font-size: 60%;
+    }
+
+    #correo {
+        margin: 0 0 0 23%;
+    }
+
+    #correo img {
+        width: 9%;
+    }
+
+    #telefono {
+        margin: 0 0 0 5%;
+    }
+
+    #telefono img {
+        width: 7%;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    #novedades .card {
+        margin-left: 14%;
+    }
+
+    .objetivos {
+        display: block;
+    }
+
+    #nosotros .card {
+        margin: 5% 8% 0;
+        width: 85%;
+    }
+
+    #nosotros img {
+        width: 12%;
+        margin: 0 45%;
+    }
+
+    #correo {
+        margin: 0 0 0 15%;
+    }
+
+    #correo img {
+        width: 11%;
+    }
+
+    #telefono {
+        margin: 2% 0 0 2%;
+    }
+
+    #telefono img {
+        width: 7%;
+        height: 5%;
+    }
+}
+
+@media screen and (max-width: 393px) {
+    #inicio {
+        margin: 25% 15% 0;
+    }
+
+    #icon1 {
+        margin-left: 25%;
+    }
+
+    #novedades .card {
+        margin-left: 12%;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    body {
+        background: url(/static/fondo_280.png) no-repeat;
+    }
+
+    .navbar-toggler-icon {
+        width: 1em;
+        height: 1em;
+    }
+
+    header img {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    h2 {
+        font-size: 80%;
+    }
+    
+    h5, p, h3, h6 {
+        font-size: 40%;
+    }
+
+    #inicio {
+        margin: 30% 15% 0;
+    }
+
+    #icon1 {
+        margin-left: 20%;
+    }
+
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        height: 2rem;
+        width: 1rem;
+    }
+    
+    #novedades .card {
+        height: 22rem;
+        width: 13rem;
+        margin-left: 4%;
+    }
+
+    #novedades a {
+        font-size: 40%;
+    }
+
+    #nosotros .card {
+        margin: 0% 8% 0;
+    }
+
+    #nosotros .card-text {
+        font-size: 40%;
+    }
+
+    .members {
+        display: block;
+    }
+
+    #equipo .card {
+        width: 40%;
+        margin-top: 5%;
+        margin-left: 25%;
+    }
+
+    #equipo .card-text {
+        font-size: 50%;
+    }
+
+    #correo {
+        margin: 0 0 0 23%;
+    }
+    #correo h6 {
+        padding: 4% 0 0 0;
+    }
+
+    #correo img {
+        width: 9%;
+    }
+
+    #novedades, #nosotros {
+        margin: 20% 10% 0;
+    }
+
+    #equipo {
+        margin: 20% 0 0 10%;
+    }
+
+    footer {
+        margin: 20% 10% 20%;
+    }
 }
